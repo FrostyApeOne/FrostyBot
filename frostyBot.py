@@ -7,7 +7,6 @@ from playsound import playsound
 import os
 import json
 
-
 dirname = os.path.dirname(__file__)
 
 chromeFilePath = os.path.join(dirname, 'chromedriver','chromedriver.exe')
@@ -151,7 +150,6 @@ def cardlPaymentM():
         except:
                 time.sleep(3)      
                 cardlPaymentM()
-
 
 while not buyButton:
 
