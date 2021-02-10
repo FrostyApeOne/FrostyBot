@@ -1,0 +1,14 @@
+{
+    "productUrl": "https://www.currys.co.uk/gbuk/phones-broadband-and-sat-nav/mobile-phones-and-accessories/mobile-accessories/goji-gotg17-on-the-go-usb-to-micro-usb-cable-0-15-m-10156047-pdt.html",
+    "refreshTime": 5,
+    "postcode": "XXX XXX",
+    "loginEmail": "xxxx@xxx.com",
+    "loginPassword": "xxxxxxx",
+    "paypalPayment": false,
+    "cardNumberCC": "xxxxxxxxxxxxxxx",
+    "cardHolderNameCC": "xxxxxxxx",
+    "expiryMonthCC": "09",
+    "expiryYearCC": "22",
+    "cardCvc": "555",
+    "autoPurchase": false
+}
