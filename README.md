@@ -9,7 +9,10 @@ FrostyBot is a simple Python based bot which allows users to perform an automate
 
 1. Download and Install Python from the following link
 
-	https://www.python.org/downloads/
+	https://www.microsoft.com/en-gb/p/python-39/9p7qfqmjrfp7?activetab=pivot:overviewtab
+
+2. Open Command Prompt in Windows, type Python and press enter! If it starts Python and shows >>> then you ahve Python installed. Type exit() and press enter then go to step 3 below..
+(If after typing Python, Windows takes you to Microsoft Store, that means Python is not installed, please follow the store instructions and install it)
 
 3. Install Selenium and playsound, run the following commands
 
