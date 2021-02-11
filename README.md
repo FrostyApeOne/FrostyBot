@@ -60,6 +60,8 @@ Please make sure the chrome window stays maximized! Do not click on the page or 
 
 Please note, sometimes the Curry's server may respond slower than usual in that case the bot might fail to take you through the checkout! You can check the Chrome window or the console and make sure it is running!
 
+**Do not minimize the Chrome window opened by the bot! The window can go behind other applications, however it needs to be maximized for the bot to be able to scan the page**
+
 ## Test
 
 Test the bot by giving it address of an item which is in stock, you can watch how it works and make sure it hits the last stage and take you to the payment gateway!
