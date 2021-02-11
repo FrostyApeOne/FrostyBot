@@ -1,5 +1,5 @@
 #
-# FrostyBot v1.1.2 
+# FrostyBot v1.1.3 
 #
 import time
 from selenium import webdriver
@@ -7,11 +7,15 @@ from playsound import playsound
 import os
 import json
 from datetime import datetime
+import platform
 
 
 dirname = os.path.dirname(__file__)
 
 chromeFilePath = os.path.join(dirname, 'chromedriver','chromedriver.exe')
+if platform.system() == 'Darwin':
+  chromeFilePath = '/usr/local/bin/chromedriver'
+
 alarmMp3 = os.path.join(dirname, 'assets','alarm.mp3')
 settingsFilePath = os.path.join(dirname, 'settings.json')
 
@@ -171,13 +175,21 @@ def cardlPaymentM():
                 time.sleep(3)      
                 cardlPaymentM()
 
+
+def getPrice():
+        try:
+                price = browser.find_element_by_xpath("//meta[@property='og:price:amount']").get_attribute("content")
+                return price
+        except:
+                return ''
+
 while not buyButton:
 
     try:
 
         checkStock()
         title = browser.title.replace('Buy', '').replace('| Free Delivery | Currys','')
-        print(f"{title} - Out of Stock........")
+        print(f"{title} | {getPrice()} | Out of Stock....")
 
         time.sleep(settingsObj['refreshTime'])
         browser.refresh()
