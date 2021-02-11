@@ -189,7 +189,7 @@ while not buyButton:
 
         checkStock()
         title = browser.title.replace('Buy', '').replace('| Free Delivery | Currys','')
-        print(f"{title} | {getPrice()} | Out of Stock....")
+        print(f"{title} | £{getPrice()} | Out of Stock....")
 
         time.sleep(settingsObj['refreshTime'])
         browser.refresh()
