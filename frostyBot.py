@@ -125,7 +125,7 @@ def enterPassword():
                 print("Password entered and submitted!")
 
         except:
-                time.sleep(3)    
+                time.sleep(2)    
                 enterPassword()
 
 def paypalPaymentM():
@@ -135,7 +135,7 @@ def paypalPaymentM():
                 print("Paypal payment button clicked!")
 
         except:
-                time.sleep(3)     
+                time.sleep(2)     
                 paypalPaymentM()
 
 def cardlPaymentM():
