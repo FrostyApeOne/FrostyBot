@@ -10,5 +10,6 @@
     "expiryMonthCC": "09",
     "expiryYearCC": "22",
     "cardCvc": "555",
-    "autoPurchase": false
+    "autoPurchase": false,
+    "alarmWhenStockFound": false
 }

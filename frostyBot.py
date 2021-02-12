@@ -134,6 +134,7 @@ def enterPassword():
 
 def paypalPaymentM():
         try:
+                time.sleep(1)
                 paypal = browser.find_element_by_xpath("//div[@data-component='PaymentMethods']/div[@data-element='PaymentMethodsButtons']/div[@data-component='PayPalPayment']/button[1]")
                 paypal.click()
                 print("Paypal payment button clicked!")
@@ -146,7 +147,7 @@ def cardlPaymentM():
         try:
                 time.sleep(1)
                 card = browser.find_element_by_xpath("//div[@data-component='PaymentMethods']/div[@data-element='PaymentMethodsButtons']/div[@data-component='CardPayment']/button[1]")
-                card.click() 
+                card.click()
                 print("Card payment button clicked!")
 
                 time.sleep(10)
@@ -172,7 +173,7 @@ def cardlPaymentM():
 
 
         except:
-                time.sleep(3)      
+                time.sleep(2)      
                 cardlPaymentM()
 
 
@@ -198,6 +199,9 @@ while not buyButton:
 
     except:
 
+        if (settingsObj['alarmWhenStockFound']):
+                playsound(alarmMp3, block=False) 
+
         acceptCookies = addButton = browser.find_element_by_id("onetrust-accept-btn-handler")
         acceptCookies.click()
         print("In Stock!")
@@ -221,5 +225,6 @@ while not buyButton:
             paypalPaymentM()
         else:
             cardlPaymentM()
-        playsound(alarmMp3)        
         buyButton = True
+        playsound(alarmMp3)
+
