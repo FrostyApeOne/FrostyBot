@@ -1,5 +1,5 @@
 #
-# FrostyBot v1.1.3 
+# FrostyBot v1.1.4
 #
 import time
 from selenium import webdriver
@@ -66,8 +66,9 @@ def contToBasket():
                 parent_el2.click()
                 print("Gone to the basket!")
         except:
-                time.sleep(3)
-                contToBasket()
+                print("Can't find the element! Skip to the next step!")
+                #time.sleep(3)
+                #contToBasket()
 
 def orderSum():
         try:
@@ -100,13 +101,14 @@ def submitSearch():
 
 def delivery():
         try:
-                parent_el5 = browser.find_element_by_xpath("//div[@data-element='DeliverySlotBlock']/button[1]")
+                parent_el5 = browser.find_element_by_xpath("//html/body/div[4]/div/div[2]/div[2]/div/div/div[2]/div[2]/div[3]/div[2]/div[2]/div/div[3]/div[1]/button")
                 parent_el5.click()
                 print("Delivery confirmed!")
-
         except:
-                time.sleep(3)      
-                delivery()
+                time.sleep(1)
+                print("Can't find the element! Try new path!")
+                parent_el5 = browser.find_element_by_xpath("//html/body/div[4]/div/div[2]/div[2]/div/div/div[2]/div[2]/div[3]/div[2]/div/div[3]/button")
+                parent_el5.click()                
 
 def enterEmail():
         try:
