@@ -1,3 +1,10 @@
+
+
+# FrostyBot is not supported anymore. Please refer to Discord Server https://discord.gg/kPKGZf3Qw3  for the latest .Net based version: FrostyBotX 
+
+
+----------------
+
 # FrostyBot
 
 FrostyBot is a simple Python based bot which allows users to perform an automated checkout on Currys.co.uk website. 
